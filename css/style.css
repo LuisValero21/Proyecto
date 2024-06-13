@@ -1,0 +1,621 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*RESET PARA REMS 62.5% = 10PX DE 16PX*/
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family:'Lato', sans-serif;
+    font-size: 1.6rem;
+   line-height: 2;
+}
+
+
+/*Globales*/
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+
+}
+
+img{
+    max-width: 40%;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 3.4rem;
+}
+
+h3{
+    font-size: 3rem;
+
+}
+
+h4{
+    font-size: 2.6rem;
+}
+
+/*Utilidades*/
+.seccion{
+    margin-top: 2rem;
+    margin-top: 2rem;
+}
+
+.fw-150{
+    font-weight: 150;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+.d-block{
+    display: block!important;
+}
+
+.contenido-centrado{
+    max-width: 800px;
+}
+/*Botones*/
+
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    display: inline-block;
+    margin-top: 3rem;
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+    
+}
+.boton:hover{
+    cursor: pointer;
+}
+.boton-amarillo{
+    background-color: #e08709;
+}
+.boton-verde{
+    background-color: #71b100;
+}
+
+
+
+/*Header*/
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+.site-header.inicio2{
+    background-image: black;
+    background-position: center center;
+    background-size: cover;
+    height: 88vh;
+    min-height: 60rem;
+}
+
+
+.site-header.inicio{
+    background-image: url(../img/Exvavadora.jpeg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+}
+
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header{
+        text-align: left;
+    }
+}
+
+.contenido-header h1{
+   color:white;
+   padding-bottom: 2rem;
+   max-width: 60rem;
+   line-height: 2;
+}
+
+@media (min-width:768px ) {
+    .barra{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.barra{
+    padding-top: 3rem;
+
+}
+
+/*Navegacion*/  
+
+.navegacion a:hover{
+    color: #71b100;
+}
+.navegacion a{
+    color:rgba(255, 255, 255, 3);
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-right: 2rem;
+    display: block;
+}
+@media (min-width: 768px) {
+    .navegacion a{
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem;
+
+    }
+    .navegacion a:last-of-type{
+        margin: 0;
+    }
+    
+}
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+/*Mobile menu*/
+
+.mobile-menu img{
+    width: 5rem;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu{
+        display: none;
+    }
+}
+
+.navegacion{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: block;
+    }
+}
+
+.navegacion:target{
+    display: block;
+}
+
+/* Iconos nosotros*/ 
+
+
+@media (min-width: 768px) {
+    .iconos-nosotros{
+        display: flex;
+        justify-content: space-between;
+       
+    }
+
+}
+
+.icono{
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .icono{
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+.icono h3{
+    text-transform: uppercase;
+}
+
+/*Anuncios*/
+
+@media (min-width: 768px) {
+    .contenedor-anuncios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    } 
+}
+
+.anuncio{
+    border: 1px solid #b5b5b5;
+    background-color:  #f5f5ff;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .anuncio{
+        flex-basis: 0 0 calc(33.3% - 1rem);
+    }
+}
+.contenido-anuncio{
+    padding: 2rem;
+}
+
+.contenido-anuncio h3, .contenido-anuncio p{
+   margin: 0;
+}
+
+.precio{
+    color: #71b100;
+    font-weight: 700;
+}
+.iconos-caracteristicas{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li{
+    display: flex;
+}
+.iconos-caracteristicas li img{
+    margin-right: 2rem;
+}
+.Ver-todas{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+/*contacto home*/
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    height: 40rem;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto{
+    flex: 0 0 95%;
+    color: white;
+}
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+
+/*seccion inferior*/
+
+
+@media (min-width: 768px) {
+    .seccion-inferior{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    
+    .seccion-inferior .blog{
+        flex-basis: 60%;
+    }
+    
+    .seccion-inferior .testimoniales{
+        flex-basis: calc(40% - 2rem);
+    }
+    
+}
+
+.entrada-blog{
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog{
+        display: flex;
+        justify-content: space-between;
+    } 
+}
+.entrada-blog:last-of-type{
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog .imagen{
+        flex-basis: 40%;
+    }
+    .entrada-blog .texto-entrada{
+        flex-basis: calc(60% - 3rem);
+    }
+}
+
+.texto-entrada a{
+    color: black;
+    text-decoration: none;
+}
+.texto-entrada h4{ 
+    margin: 0;
+    line-height: 3rem;
+   
+}
+.texto-entrada h4::after{
+    content:'';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71b100;
+    margin-top: 1rem;
+}
+
+span{
+    color: #e08709;
+}
+
+/*TESTIMONIALES*/
+
+.testimonial{
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+}
+
+.testimonial p{
+    text-align: right;
+}
+
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position:absolute;
+    left: -2rem;
+}
+.testimonial blockquote{
+    position:relative;
+    padding-left: 5rem;
+    font-size:300;
+}
+
+/* footer*/
+
+.site-footer{
+    background-color: #333333;
+    margin: 0;
+}
+
+.site-footer nav{
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .site-footer nav{
+        display: block;
+    }
+}
+
+.copyright{
+    margin: 0;
+    color: #ffffff ;
+}
+
+.contenedor-footer{
+    padding: 3rem 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer{ 
+        display: flex;
+        justify-content: space-between;
+
+    }
+}
+
+/*PAGINAS INTERNAS*/
+
+@media (min-width: 768px) {
+    .contenido-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-column-gap: 2rem;
+    }
+}
+
+
+.texto-nosotros blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+/*Anuncio*/
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Contacto*/
+legend{
+    font-size: 2rem ;
+    color: #4f4f4f;
+}
+label{
+    display: block;
+    font-weight: 700;
+    text-transform:uppercase ;
+}
+
+.contacto p{
+   font-size: 1.4rem; 
+   color: #4f4f4f;
+   margin:2rem 0 0 0;
+}
+input:not([type="submit"]), textarea, select{
+    background-color: #e1e1e1;
+    padding: .5rem;
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"]{
+    width: auto;
+}
+
+select{
+    appearance: none;
+    -webkit-appearance: none;
+}
+textarea{
+   height: 20rem;
+}
+
+.forma-contacto{
+    max-width: 30rem    ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenedor2{
+    position: relative;
+    width: 400px;
+    background-color: #333333;
+    border: 2px solid rgba(255,255,255,.6);
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    backdrop-filter: blur(15px); 
+}
+
+.contenedor2 h2{
+    font-size: 2.3rem;
+    color: #fff;
+    text-align: center;
+}
+
+.input-contenedor{
+    position: relative;
+    margin: 30px 0;
+    width: 300px;
+    border-bottom: 2px solid #fff;
+}
+
+.input-contenedor label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 1s;
+    font-weight: bold;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+
+.input-contenedor input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: -35px 0 5px;
+    color: #fff;
+}
+
+.olvidar{
+    margin: -15px 0 15px;
+    font-size: .9rem;
+    color: #fff;
+    display: flex;  
+    justify-content: center;
+}
+
+.olvidar label input{
+    margin: 3px;
+}
+
+.olvidar label a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: .3s;
+    font-size: .9rem
+    ;
+}
+
+.olvidar label a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    transition: .4s;
+
+}
+
+.registrar{
+    font-size: .8rem;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.registrar p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.registrar p a:hover{
+    text-decoration: underline;
+}
